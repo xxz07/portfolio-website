@@ -63,7 +63,7 @@ export default function RootLayout({
                 </Link>
 
                 <Link
-                  href={"/projects"}
+                  href={"/#projects"}
                   className="text-sm font-semibold text-neutral-700 hover:text-neutral-900 transition-colors duration-200 relative group"
                 >
                   Projects
