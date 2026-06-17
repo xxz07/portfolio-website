@@ -1,4 +1,5 @@
 import ResumeButton from "./components/resume-button";
+import ProjectCard from "./components/project-card";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
           </p>
           <p className="mt-3 max-w-2xl text-neutral-700">
             Hello! my name is <span className="font-bold">Xinzhe Xu</span> but
-            most people call me <span className="font-bold">Dennis</span> and I
+            most people call me <span className="font-bold">Dennis</span>, I'm 18 years old and I
             enjoy spending my time in the gym. I'm eager to expand my knowledge
             in programming languages. As I continue my studies, I'm actively
             working on projects to sharpen my coding skills and gain hands-on
@@ -126,12 +127,48 @@ export default function Home() {
           id="projects"
           className="scroll-mt-28 rounded-2xl bg-white/50 backdrop-blur-sm border border-neutral-200/30 p-6 md:p-8"
         >
+          <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+            Projects
+          </p>
           <h2 className="mt-2 text-3xl font-bold text-neutral-900">
             Featured projects
           </h2>
-          <p className="mt-3 max-w-2xl text-neutral-700">
-            Place your project summaries, screenshots, and links here.
-          </p>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <ProjectCard
+              title="TreeMedia"
+              description="This project is a attmepted try at creating a media application. This project was made with other classmates and I."
+              tags={["React", "Next.js", "Tailwind"]}
+              linkLabel="View project"
+              href="https://github.com/xxz07/treemedia"
+            />
+
+            <ProjectCard
+              title="SDG Dashboard"
+              description="This is an old school project where you need to show graphs of sustainable development goals. This project was made with other classmates and I."
+              tags={["Next.js", "Tailwind", "Chart.js"]}
+              linkLabel="View project"
+              href="https://github.com/xxz07/SDG-Dashboard"
+            />
+
+            <ProjectCard
+              title="Budget Buddy"
+              description="This project was made to use crud operations by posting, deleting, updating and reading posts. This project was made with other classmates and I."
+              tags={["Symphony", "Bootstrap", "Database"]}
+              linkLabel="View project"
+              href="https://github.com/xxz07/Budget-Buddy.git"
+            />
+
+            <ProjectCard
+              title="Library lending system"
+              description="Work in progress."
+              tags={["Next.js", "Tailwind", "React"]}
+              linkLabel="View project"
+              href="https://github.com/ROCMondriaanTIN/sd24-project-p08-werkplek-leren-scientology-speedrunners-larping.git"
+            />
+
+
+          </div>
         </section>
 
         <section
