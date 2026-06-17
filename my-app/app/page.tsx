@@ -1,6 +1,15 @@
 import ResumeButton from "./components/resume-button";
 import ProjectCard from "./components/project-card";
 
+const contactEmail = "your-email@example.com";
+
+function createMailtoLink(email: string) {
+  const subject = encodeURIComponent("Portfolio message");
+  const body = encodeURIComponent("Hi Xinzhe,\n\n");
+
+  return `mailto:${email}?subject=${subject}&body=${body}`;
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen px-6 py-10 md:px-12 bg-linear-to-br from-neutral-50 via-white to-neutral-50">
@@ -180,23 +189,33 @@ export default function Home() {
           </p>
           <h2 className="mt-2 text-3xl font-bold">Get in touch</h2>
           <p className="mt-3 max-w-2xl text-neutral-200">
+            You can reach me on LinkedIn, GitHub, or send me an email directly.
+          </p>
+
+          <p className="flex flex-col text-sm mt-6 text-neutral-200">
+            <span>Business mail: xxz07.work@gmail.com</span>
+            <span>Student mail: 302056276@student.rocmondriaan.nl</span>
+          </p>
+
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href="https://www.linkedin.com/in/xinzhe-xu-9212b2364?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-sm font-medium text-neutral-200 underline decoration-neutral-500 underline-offset-4 hover:text-white"
             >
-              {" "}
               LinkedIn
             </a>
+
             <a
               href="https://github.com/xxz07"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-sm font-medium text-neutral-200 underline decoration-neutral-500 underline-offset-4 hover:text-white"
             >
-              {" "}
               GitHub
             </a>
-          </p>
+          </div>
         </section>
       </section>
 
