@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import ResumeButton from "./resume-button";
 
 export default function MobileSidebar() {
   const [open, setOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function MobileSidebar() {
         aria-label={open ? "Close sidebar" : "Open sidebar"}
         aria-expanded={open}
         onClick={() => setOpen((current) => !current)}
-        className="fixed left-4 top-4 z-60 md:hidden rounded-full p-3 bg-white backdrop-blur transition-transform duration-300 ease-out active:scale-95"
+        className="fixed right-4 top-5 z-60 md:hidden rounded-full p-2.5 bg-white/80 backdrop-blur border border-neutral-200/50 shadow-md hover:shadow-lg transition-all duration-300 ease-out active:scale-95"
       >
         <span
           className={`block h-0.5 w-5 bg-neutral-900 transition-all duration-300 ${
@@ -42,39 +43,38 @@ export default function MobileSidebar() {
       />
 
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-64 border-r border-neutral-200 bg-white/95 px-5 py-6 shadow-2xl backdrop-blur transition-transform duration-300 ease-out md:hidden ${
-          open ? "translate-x-0" : "-translate-x-full"
+        className={`fixed inset-y-0 right-0 z-50 w-64 border-l border-neutral-200/50 bg-white/80 backdrop-blur-md px-6 py-8 shadow-lg transition-transform duration-300 ease-out md:hidden ${
+          open ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex h-full flex-col gap-8">
-          <div className="flex items-center justify-between"></div>
 
-          <nav className="flex flex-1 flex-col gap-4 text-lg font-medium text-neutral-800">
+          <nav className="flex flex-1 flex-col gap-3">
             <Link
               href="/"
               onClick={closeSidebar}
-              className="rounded-xl px-3 py-2 hover:underline"
+              className="text-sm font-semibold text-neutral-700 hover:text-neutral-900 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-neutral-100/50"
             >
               Home
             </Link>
             <Link
               href="/#about"
               onClick={closeSidebar}
-              className="rounded-xl px-3 py-2 hover:underline"
+              className="text-sm font-semibold text-neutral-700 hover:text-neutral-900 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-neutral-100/50"
             >
               About
             </Link>
             <Link
               href="/#education"
               onClick={closeSidebar}
-              className="rounded-xl px-3 py-2 hover:underline"
+              className="text-sm font-semibold text-neutral-700 hover:text-neutral-900 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-neutral-100/50"
             >
               Education
             </Link>
             <Link
               href="/#projects"
               onClick={closeSidebar}
-              className="rounded-xl px-3 py-2 hover:underline"
+              className="text-sm font-semibold text-neutral-700 hover:text-neutral-900 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-neutral-100/50"
             >
               Projects
             </Link>
@@ -82,11 +82,15 @@ export default function MobileSidebar() {
             <Link
               href="/#contact"
               onClick={closeSidebar}
-              className="rounded-xl px-3 py-2 hover:underline"
+              className="text-sm font-semibold text-neutral-700 hover:text-neutral-900 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-neutral-100/50"
             >
               Contact
             </Link>
           </nav>
+
+          <div className="flex justify-center pt-4 border-t border-neutral-200/50">
+            <ResumeButton size="sm" />
+          </div>
         </div>
       </aside>
     </>

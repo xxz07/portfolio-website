@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import MobileSidebar from "./components/mobile-sidebar";
+import ResumeButton from "./components/resume-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,48 +30,53 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body>
+      <body className="bg-linear-to-br from-neutral-50 via-white to-neutral-50">
         {/* desktop menu/header */}
-        <header className="p-4">
-          <div className="shadow-md justify-between hidden md:flex">
-            {/* Left side of header */}
-            <div>
+        <header className="sticky top-0 z-40 border-b border-neutral-200/50 bg-white/80 backdrop-blur-md">
+          <div className="mx-auto max-w-full px-6 py-4 md:px-12">
+            <div className="flex items-center justify-between gap-8">
+              {/* Left side of header */}
               <Link
                 href={"/"}
-                className="font-bold text-2xl hover:underline m-auto"
+                className="font-bold text-2xl text-neutral-900 hover:text-neutral-700 transition-colors duration-200"
               >
-                Home
-              </Link>
-            </div>
-
-            {/* Right Side */}
-            <div className="grid grid-cols-4 content-center gap-4">
-              <Link
-                href={"/#about"}
-                className="font-bold text-2xl hover:underline m-auto"
-              >
-                About
+                Xinzhe Xu
               </Link>
 
-              <Link
-                href={"/#education"}
-                className="font-bold text-2xl hover:underline m-auto"
-              >
-                Education
-              </Link>
-              <Link
-                href={"/#projects"}
-                className="font-bold text-2xl hover:underline m-auto"
-              >
-                Projects
-              </Link>
+              {/* Right Side - Navigation */}
+              <nav className="hidden md:flex items-center gap-8">
+                <Link
+                  href={"/#about"}
+                  className="text-sm font-semibold text-neutral-700 hover:text-neutral-900 transition-colors duration-200 relative group"
+                >
+                  About
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-900 transition-all duration-300 group-hover:w-full" />
+                </Link>
 
-              <Link
-                href={"/#contact"}
-                className="font-bold text-2xl hover:underline m-auto"
-              >
-                Contact
-              </Link>
+                <Link
+                  href={"/#education"}
+                  className="text-sm font-semibold text-neutral-700 hover:text-neutral-900 transition-colors duration-200 relative group"
+                >
+                  Education
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-900 transition-all duration-300 group-hover:w-full" />
+                </Link>
+
+                <Link
+                  href={"/projects"}
+                  className="text-sm font-semibold text-neutral-700 hover:text-neutral-900 transition-colors duration-200 relative group"
+                >
+                  Projects
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-900 transition-all duration-300 group-hover:w-full" />
+                </Link>
+
+                <Link
+                  href={"/#contact"}
+                  className="text-sm font-semibold text-neutral-700 hover:text-neutral-900 transition-colors duration-200 relative group"
+                >
+                  Contact
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-900 transition-all duration-300 group-hover:w-full" />
+                </Link>
+              </nav>
             </div>
           </div>
         </header>

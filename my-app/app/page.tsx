@@ -1,8 +1,10 @@
+import ResumeButton from "./components/resume-button";
+
 export default function Home() {
   return (
-    <main className="min-h-screen px-6 py-10 md:px-12">
-      <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 rounded-3xl p-8 md:p-12">
-        <div className="max-w-3xl space-y-4">
+    <main className="min-h-screen px-6 py-10 md:px-12 bg-linear-to-br from-neutral-50 via-white to-neutral-50">
+      <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 rounded-3xl bg-white/80 backdrop-blur-md border border-neutral-200/50 shadow-lg p-8 md:p-12">
+        <div className="max-w-3xl space-y-6">
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
             Portfolio
           </p>
@@ -15,7 +17,7 @@ export default function Home() {
           </p>
         </div>
 
-        <section id="projects" className="scroll-mt-28 rounded-2xl  p-6 md:p-8">
+        <section id="projects" className="scroll-mt-28 rounded-2xl bg-white/50 backdrop-blur-sm border border-neutral-200/30 p-6 md:p-8">
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
             Projects
           </p>
@@ -27,7 +29,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="about" className="scroll-mt-28 rounded-2xl bg-stone-50 p-6 md:p-8">
+        <section id="about" className="scroll-mt-28 rounded-2xl bg-stone-50/60 backdrop-blur-sm border border-neutral-200/30 p-6 md:p-8">
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
             About
           </p>
@@ -39,7 +41,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="education" className="scroll-mt-28 rounded-2xl bg-neutral-50 p-6 md:p-8">
+        <section id="education" className="scroll-mt-28 rounded-2xl bg-neutral-50/60 backdrop-blur-sm border border-neutral-200/30 p-6 md:p-8">
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
             Education
           </p>
@@ -51,7 +53,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="contact" className="scroll-mt-28 rounded-2xl bg-neutral-900 p-6 text-white md:p-8">
+        <section id="contact" className="scroll-mt-28 rounded-2xl bg-neutral-900/90 backdrop-blur-sm border border-neutral-700/50 p-6 text-white md:p-8">
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-300">
             Contact
           </p>
@@ -61,6 +63,10 @@ export default function Home() {
           </p>
         </section>
       </section>
+
+        <div className="flex justify-center pt-12">
+          <ResumeButton />
+        </div>
     </main>
   );
 }
