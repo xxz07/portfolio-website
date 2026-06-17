@@ -1,13 +1,14 @@
 export default function Footer() {
   return (
-    <footer className="mt-10 pt-1 pb-1 w-full bg-gray-300 dark:border-black sticky">
+    <footer className="pt-1 pb-1 w-full bg-gray-300 dark:border-black sticky bottom-0">
         
   <div className="footer-content flex flex-col my-6 items-center justify-center gap-4 text-center">
 
     <nav className="footer-links">
-      <a href="/about"> About</a>
       <a href="/projects"> Projects</a>
       <a href="/skills"> Skills</a>
+      <a href="/about"> About</a>
+      <a href="/education"> Education</a>
     </nav>
 
     <div className="footer-socials">

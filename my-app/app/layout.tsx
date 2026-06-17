@@ -34,31 +34,38 @@ export default function RootLayout({
           <div className="shadow-md justify-between hidden md:flex">
             {/* Left side of header */}
             <div>
-              <Link href={"/"}>
+              <Link href={"/"}
+              className="font-bold text-2xl hover:underline m-auto">
+              Home
               </Link>
             </div>
 
             {/* Right Side */}
-            {/* Todo: hide admin page if not admin */}
-            <div className="grid grid-cols-3 content-center gap-4">
+            <div className="grid grid-cols-4 content-center gap-4">
               <Link
-                href={"/admin"}
-                className="font-bold text-2xl hover:underline"
+                href={"/projects"}
+                className="font-bold text-2xl hover:underline m-auto"
               >
-                Admin
+                Projects
               </Link>
               <Link
-                href={"/books"}
-                className="font-bold text-2xl hover:underline"
+                href={"/skills"}
+                className="font-bold text-2xl hover:underline m-auto"
               >
-                Boeken
+                Skills
               </Link>
-              {/*Todo: Make profile page text "login" if nog logged it. Still redirect to profile though */}
+
               <Link
-                href={"/profile"}
-                className="font-bold text-2xl hover:underline"
+                href={"/about"}
+                className="font-bold text-2xl hover:underline m-auto"
               >
-                Profile
+                About
+              </Link>
+              <Link
+                href={"/education"}
+                className="font-bold text-2xl hover:underline m-auto"
+              >
+                Education
               </Link>
             </div>
           </div>
@@ -68,27 +75,25 @@ export default function RootLayout({
         {children}
 
         {/* Mobile Menu */}
-        <div className="fixed bottom-0 left-0 right-0 inset-shadow-2xs pt-3 rounded-xl h-[7vh] grid grid-cols-4 content-center gap-4 md:hidden items-stretch place-items-center">
-          {/* Home page */}
+        <div className="fixed bottom-0 left-0 right-0 inset-shadow-2xs pt-3 rounded-xl h-[7vh] grid grid-cols-5 content-center gap-4 md:hidden items-stretch place-items-center">
           <Link href={"/"}>
-            
+            Home
           </Link>
 
-          {/* Books page */}
-          <Link href={"/books"}>
-            
+          <Link href={"/projects"}>
+            Projects
           </Link>
 
-          {/* Profile page*/}
-
-          <Link href={"/profile"}>
-            
+          <Link href={"/skills"}>
+            Skills
           </Link>
 
-          {/* Admin page*/}
-          {/* Todo: Hide if not admin or teacher */}
-          <Link href={"/admin"}>
-            
+          <Link href={"/about"}>
+            About
+          </Link>
+
+          <Link href={"/education"}>
+            Education
           </Link>
         </div>
       </body>
