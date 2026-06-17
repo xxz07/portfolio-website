@@ -8,19 +8,124 @@ export default function Home() {
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
             Portfolio
           </p>
-          <h1 className="text-4xl font-bold md:text-6xl">
-            Hi, I&apos;m Xinzhe Xu.
+          <p className="text-base leading-7 md:text-lg text-neutral-800">
+            Hi, my name is
+          </p>
+          <h1 className="text-4xl font-bold md:text-6xl text-neutral-900">
+            Xinzhe Xu
           </h1>
-          <p className="text-base leading-7 md:text-lg">
-            This home page is now the main place for your content. Use the
-            navigation to jump to each section on the page.
+          <p className="text-base leading-7 md:text-lg text-neutral-500">
+            I'm a student at ROC Mondriaan, studying in the field of{" "}
+            <span className="font-bold">Software Development</span> and this is
+            my <span className="font-bold">Portfolio</span>.
           </p>
         </div>
 
-        <section id="projects" className="scroll-mt-28 rounded-2xl bg-white/50 backdrop-blur-sm border border-neutral-200/30 p-6 md:p-8">
+        <section
+          id="about"
+          className="scroll-mt-28 rounded-2xl bg-stone-50/60 backdrop-blur-sm border border-neutral-200/30 p-6 md:p-8"
+        >
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
-            Projects
+            About me
           </p>
+          <p className="mt-3 max-w-2xl text-neutral-700">
+            Hello! my name is <span className="font-bold">Xinzhe Xu</span> but
+            most people call me <span className="font-bold">Dennis</span> and I
+            enjoy spending my time in the gym. I'm eager to expand my knowledge
+            in programming languages. As I continue my studies, I'm actively
+            working on projects to sharpen my coding skills and gain hands-on
+            experience. I'm always open with learning new techniques and
+            collaborating on exciting projects.
+          </p>
+        </section>
+
+        <section
+          id="education"
+          className="scroll-mt-28 rounded-2xl bg-neutral-50/60 backdrop-blur-sm border border-neutral-200/30 p-6 md:p-8"
+        >
+          <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+            Education
+          </p>
+          <h2 className="mt-2 text-3xl font-bold text-neutral-900">
+            Education
+          </h2>
+
+          <div className="mt-6 space-y-4">
+            <div className="border-l-2 border-neutral-300 pl-4">
+              <h3 className="text-lg font-semibold text-neutral-900">
+                Montaigne Lyceum
+              </h3>
+              <p className="text-sm text-neutral-500">VMBO Diploma</p>
+              <p className="text-sm text-neutral-600">2021 - 2024</p>
+            </div>
+
+            <div className="border-l-2 border-neutral-300 pl-4">
+              <h3 className="text-lg font-semibold text-neutral-900">
+                ROC Mondriaan
+              </h3>
+              <p className="text-sm text-neutral-500">Software Development</p>
+              <p className="text-sm text-neutral-600">2024 - Present</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col mt-10 justify-center pt-4 border-t border-neutral-200/50">
+            <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+              Skills
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-neutral-900">
+              Languages & Frameworks
+            </h2>
+
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Languages */}
+              <div>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-3">
+                  Languages
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 rounded bg-neutral-800 text-sm">
+                    JavaScript
+                  </span>
+                  <span className="px-3 py-1 rounded bg-neutral-800 text-sm">
+                    TypeScript
+                  </span>
+                  <span className="px-3 py-1 rounded bg-neutral-800 text-sm">
+                    PHP
+                  </span>
+                </div>
+              </div>
+
+              {/* Frameworks */}
+              <div>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-3">
+                  Frameworks & Tools
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 rounded bg-neutral-600 text-sm">
+                    React
+                  </span>
+                  <span className="px-3 py-1 rounded bg-neutral-600 text-sm">
+                    Next.js
+                  </span>
+                  <span className="px-3 py-1 rounded bg-neutral-600 text-sm">
+                    Symphony
+                  </span>
+                  <span className="px-3 py-1 rounded bg-neutral-600 text-sm">
+                    Tailwind
+                  </span>
+                  <span className="px-3 py-1 rounded bg-neutral-600 text-sm">
+                    Bootstrap
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="projects"
+          className="scroll-mt-28 rounded-2xl bg-white/50 backdrop-blur-sm border border-neutral-200/30 p-6 md:p-8"
+        >
           <h2 className="mt-2 text-3xl font-bold text-neutral-900">
             Featured projects
           </h2>
@@ -29,44 +134,38 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="about" className="scroll-mt-28 rounded-2xl bg-stone-50/60 backdrop-blur-sm border border-neutral-200/30 p-6 md:p-8">
-          <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
-            About
-          </p>
-          <h2 className="mt-2 text-3xl font-bold text-neutral-900">
-            About me
-          </h2>
-          <p className="mt-3 max-w-2xl text-neutral-700">
-            Add your bio and background here.
-          </p>
-        </section>
-
-        <section id="education" className="scroll-mt-28 rounded-2xl bg-neutral-50/60 backdrop-blur-sm border border-neutral-200/30 p-6 md:p-8">
-          <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
-            Education
-          </p>
-          <h2 className="mt-2 text-3xl font-bold text-neutral-900">
-            Education
-          </h2>
-          <p className="mt-3 max-w-2xl text-neutral-700">
-            Add your school history or certifications here.
-          </p>
-        </section>
-
-        <section id="contact" className="scroll-mt-28 rounded-2xl bg-neutral-900/90 backdrop-blur-sm border border-neutral-700/50 p-6 text-white md:p-8">
+        <section
+          id="contact"
+          className="scroll-mt-28 rounded-2xl bg-neutral-900/90 backdrop-blur-sm border border-neutral-700/50 p-6 text-white md:p-8"
+        >
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-300">
             Contact
           </p>
           <h2 className="mt-2 text-3xl font-bold">Get in touch</h2>
           <p className="mt-3 max-w-2xl text-neutral-200">
-            Add your email, socials, or a contact form here.
+            <a
+              href="https://www.linkedin.com/in/xinzhe-xu-9212b2364?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/xxz07"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              GitHub
+            </a>
           </p>
         </section>
       </section>
 
-        <div className="flex justify-center pt-12">
-          <ResumeButton />
-        </div>
+      <div className="flex justify-center pt-12">
+        <ResumeButton />
+      </div>
     </main>
   );
 }

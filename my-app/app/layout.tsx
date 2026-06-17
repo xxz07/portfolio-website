@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import MobileSidebar from "./components/mobile-sidebar";
 import ResumeButton from "./components/resume-button";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
@@ -28,11 +29,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="bg-linear-to-br from-neutral-50 via-white to-neutral-50">
         {/* desktop menu/header */}
-        <header className="sticky top-0 z-40 border-b border-neutral-200/50 bg-white/80 backdrop-blur-md">
+        <header className="sticky top-0 z-40 border-b bg-linear-to-br from-neutral-50 via-white to-neutral-50 backdrop-blur-md">
           <div className="mx-auto max-w-full px-6 py-4 md:px-12">
             <div className="flex items-center justify-between gap-8">
               {/* Left side of header */}
