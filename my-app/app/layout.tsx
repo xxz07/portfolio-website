@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import MobileSidebar from "./components/mobile-sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,68 +35,52 @@ export default function RootLayout({
           <div className="shadow-md justify-between hidden md:flex">
             {/* Left side of header */}
             <div>
-              <Link href={"/"}
-              className="font-bold text-2xl hover:underline m-auto">
-              Home
+              <Link
+                href={"/"}
+                className="font-bold text-2xl hover:underline m-auto"
+              >
+                Home
               </Link>
             </div>
 
             {/* Right Side */}
             <div className="grid grid-cols-4 content-center gap-4">
               <Link
-                href={"/projects"}
-                className="font-bold text-2xl hover:underline m-auto"
-              >
-                Projects
-              </Link>
-              <Link
-                href={"/skills"}
-                className="font-bold text-2xl hover:underline m-auto"
-              >
-                Skills
-              </Link>
-
-              <Link
-                href={"/about"}
+                href={"/#about"}
                 className="font-bold text-2xl hover:underline m-auto"
               >
                 About
               </Link>
+
               <Link
-                href={"/education"}
+                href={"/#education"}
                 className="font-bold text-2xl hover:underline m-auto"
               >
                 Education
+              </Link>
+              <Link
+                href={"/#projects"}
+                className="font-bold text-2xl hover:underline m-auto"
+              >
+                Projects
+              </Link>
+
+              <Link
+                href={"/#contact"}
+                className="font-bold text-2xl hover:underline m-auto"
+              >
+                Contact
               </Link>
             </div>
           </div>
         </header>
 
-        {/*Main content*/}
-        {children}
-
-        {/* Mobile Menu */}
-        <div className="fixed bottom-0 left-0 right-0 inset-shadow-2xs pt-3 rounded-xl h-[7vh] grid grid-cols-5 content-center gap-4 md:hidden items-stretch place-items-center">
-          <Link href={"/"}>
-            Home
-          </Link>
-
-          <Link href={"/projects"}>
-            Projects
-          </Link>
-
-          <Link href={"/skills"}>
-            Skills
-          </Link>
-
-          <Link href={"/about"}>
-            About
-          </Link>
-
-          <Link href={"/education"}>
-            Education
-          </Link>
+        <div className="md:pl-0">
+          {/* Main content */}
+          {children}
         </div>
+
+        <MobileSidebar />
       </body>
     </html>
   );
